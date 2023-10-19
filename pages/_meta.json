@@ -1,15 +1,17 @@
 {
-  "index": "Introduction",
-  "another": "Another Page",
+  "index": "About",
+  "another": "Getting started",
   "advanced": "Advanced (A Folder)",
   "about": {
-    "title": "About",
-    "type": "page"
+    "title": "Website ↗",
+    "type": "page",
+    "href": "https://www.beeker.tech",
+    "newWindow": true
   },
   "contact": {
     "title": "Contact ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://www.beeker.tech/contact",
     "newWindow": true
   }
 }
