@@ -93,6 +93,11 @@ const config: DocsThemeConfig = {
   },
   primaryHue: 202,
   primarySaturation: 96,
+  useNextSeoProps() {
+    return {
+      titleTemplate: "%s – Beeker",
+    };
+  },
   // To add links to your github and discord, see the following example :
   // https://github.com/shuding/nextra-docs-template/blob/main/theme.config.tsx
 };
