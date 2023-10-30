@@ -1,7 +1,6 @@
 {
   "index": "About",
-  "another": "Getting started",
-  "advanced": "Advanced (A Folder)",
+  "getting-started": "Getting started",
   "about": {
     "title": "Website ↗",
     "type": "page",

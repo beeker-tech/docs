@@ -1,0 +1,125 @@
+## Prerequisite
+
+Beeker is based on Node.js, so you need to get it installed on your machine.
+
+See https://nodejs.org/ for more information.
+
+## Installation
+
+To get started, you can install our command line tool with the package manager of your choice :
+
+with **npm**
+
+```console copy
+npm install -g @beeker-tech/cli
+```
+
+with **yarn**
+
+```console copy
+yarn global add @beeker-tech/cli
+```
+
+with **pnpm**
+
+```console copy
+pnpm add -g @beeker-tech/cli
+```
+
+## Usage
+
+Here is an example of usage in a react application.
+
+### Example file
+
+In the react project of your choice, create an example file named page.tsx :
+
+```console copy
+touch page.tsx
+```
+
+Paste the following content :
+
+```js filename="page.tsx" copy
+import React from "react";
+
+export default function Page() {
+  return (
+    <body>
+      <h1>Page title</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ornare, sem
+        id pellentesque blandit, ex nisl laoreet sapien, nec vestibulum urna
+        ligula pretium sem.
+      </p>
+    </body>
+  );
+}
+```
+
+In the next sections, we will aim to use Beeker to update the title of this page.
+
+### Define your first rule
+
+Create a template file named update-page-title.beek like the following :
+
+```txt filename="update-page-title.beek" copy
+The language is typescript and the frameworks are react.js and next.js.
+Just update h1 tag with text content "{{title}}".
+```
+
+### Configure your first action
+
+Create a configuration file named update-page-title.action.yml like the following :
+
+```yml filename="update-page-title.action.yml" copy
+name: update-page-title
+label: Example - Update page title
+description: Allow to update example page title
+group: Example
+
+variables:
+  - name: title
+    label: Title
+
+rules:
+  - name: update-title
+    path: ./update-page-title.beek
+
+files:
+  - path: ./page.tsx
+    rules:
+      - update-page-title
+```
+
+### Preview your action
+
+When your action is configured, you can preview it with beeker cli :
+
+```console copy
+beeker
+```
+
+👉 Select "action"
+
+👉 Then "preview"
+
+👉 Select your action file in list
+
+> Note : Your target file will not be updated.
+
+### Execute your action
+
+When your action is configured, you can launch it with beeker cli :
+
+```console copy
+beeker
+```
+
+👉 Select "action"
+
+👉 Then "execute"
+
+👉 Select your action file in list
+
+> Note : Unlike preview, executing an action will apply modifications in the target file.

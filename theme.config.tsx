@@ -2,6 +2,8 @@ import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
 import styles from "./theme.config.module.scss";
 
+const currentYear = new Date().getFullYear();
+
 const config: DocsThemeConfig = {
   logo: (
     <span>
@@ -79,18 +81,20 @@ const config: DocsThemeConfig = {
       </svg>
     </span>
   ),
-  project: {
-    link: "https://github.com/shuding/nextra-docs-template",
-  },
-  chat: {
-    link: "https://discord.com",
-  },
-  docsRepositoryBase: "https://github.com/shuding/nextra-docs-template",
   footer: {
-    text: "Nextra Docs Template",
+    text: (
+      <p>
+        Pamplem -&nbsp;
+        <span style={{ fontSize: "0.75rem" }}>
+          Copyright © 2023-{currentYear}
+        </span>
+      </p>
+    ),
   },
   primaryHue: 202,
   primarySaturation: 96,
+  // To add links to your github and discord, see the following example :
+  // https://github.com/shuding/nextra-docs-template/blob/main/theme.config.tsx
 };
 
 export default config;
