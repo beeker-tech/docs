@@ -6,7 +6,7 @@ See https://nodejs.org/ for more information.
 
 ## Installation
 
-To get started, you can install our command line tool with the package manager of your choice :
+To get started, you can install our command line tool with the package manager of your choice:
 
 with **npm**
 
@@ -32,13 +32,13 @@ Here is an example of usage in a react application.
 
 ### Example file
 
-In the react project of your choice, create an example file named page.tsx :
+In the react project of your choice, create an example file named page.tsx:
 
 ```console copy
 touch page.tsx
 ```
 
-Paste the following content :
+Paste the following content:
 
 ```js filename="page.tsx" copy
 import React from "react";
@@ -61,7 +61,7 @@ In the next sections, we will aim to use Beeker to update the title of this page
 
 ### Define your first rule
 
-Create a template file named update-page-title.beek like the following :
+Create a template file named update-page-title.beek like the following:
 
 ```txt filename="update-page-title.beek" copy
 The language is typescript and the frameworks are react.js and next.js.
@@ -70,7 +70,7 @@ Just update h1 tag with text content "{{title}}".
 
 ### Configure your first action
 
-Create a configuration file named update-page-title.action.yml like the following :
+Create a configuration file named update-page-title.action.yml like the following:
 
 ```yml filename="update-page-title.action.yml" copy
 name: update-page-title
@@ -94,7 +94,7 @@ files:
 
 ### Preview your action
 
-When your action is configured, you can preview it with beeker cli :
+When your action is configured, you can preview it with beeker cli:
 
 ```console copy
 beeker
@@ -110,7 +110,7 @@ beeker
 
 ### Execute your action
 
-When your action is configured, you can launch it with beeker cli :
+When your action is configured, you can launch it with beeker cli:
 
 ```console copy
 beeker
@@ -122,4 +122,4 @@ beeker
 
 👉 Select your action file in list
 
-> Note : Unlike preview, executing an action will apply modifications in the target file.
+> Note: Unlike preview, executing an action will apply modifications on the target file.
