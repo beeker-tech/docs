@@ -1,23 +1,15 @@
-# Nextra Docs Template
+# Beeker Docs Template
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
-
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
-
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
-
-## Quick Start
-
-Click the button to clone this repository and deploy it on Vercel:
-
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
-
-## Local Development
-
-First, run `pnpm i` to install the dependencies.
-
-Then, run `pnpm dev` to start the development server and visit localhost:3000.
+This is the public repository for Beeker Docs. If you find any errors in our docs or have suggestions, please submit an issue or pull request.
 
 ## License
 
-This project is licensed under the MIT License.
+Documentation (guides, references, and associated images) is licensed as
+Creative Commons Attribution-NonCommercial-ShareAlike CC BY-NC-SA. The full
+license can be found
+[here](http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode), and the
+human-readable summary
+[here](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+Everything in this repository not covered above is licensed under the [included
+MIT license](./LICENSE).
