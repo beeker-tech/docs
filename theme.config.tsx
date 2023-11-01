@@ -98,6 +98,9 @@ const config: DocsThemeConfig = {
       titleTemplate: "%s – Beeker",
     };
   },
+  chat: {
+    link: "https://discord.com/channels/1169345821658062858/1169345822354313318",
+  },
   // To add links to your github and discord, see the following example :
   // https://github.com/shuding/nextra-docs-template/blob/main/theme.config.tsx
 };
