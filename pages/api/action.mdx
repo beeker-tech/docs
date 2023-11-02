@@ -32,15 +32,15 @@ files:
 
 ### Root
 
-| Keyword               | Description                                                    | Required |
-| :-------------------- | :------------------------------------------------------------- | :------- |
-| name\*                | The name of your action.                                       | ✔        |
-| label                 | A nice label for your action.                                  | ✘        |
-| description           | A short text describing what your action will do.              | ✘        |
-| group                 | The parent group of the action, for grouping actions together. | ✘        |
-| variables             | The variables that will be injected to rules.                  | ✘        |
-| [rules](actions#rule) | The list of rules to apply with this action.                   | ✔        |
-| [files](actions#file) | The list of files that will be affected by this action.        | ✔        |
+| Keyword                | Description                                                    | Required |
+| :--------------------- | :------------------------------------------------------------- | :------- |
+| name\*                 | The name of your action.                                       | ✔        |
+| label                  | A nice label for your action.                                  | ✘        |
+| description            | A short text describing what your action will do.              | ✘        |
+| group                  | The parent group of the action, for grouping actions together. | ✘        |
+| variables              | The variables that will be injected to rules.                  | ✘        |
+| [rules\*](action#rule) | The list of rules to apply with this action.                   | ✔        |
+| [files\*](action#file) | The list of files that will be affected by this action.        | ✔        |
 
 ### Rule
 
