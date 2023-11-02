@@ -1,0 +1,57 @@
+# Action
+
+## What is an action ?
+
+See [Beeker overview](/) for more information.
+
+## Example file
+
+```yml filename="update-page-title.action.yml" copy
+name: update-page-title
+label: Example - Update page title
+description: Allow to update example page title
+group: Example
+
+variables:
+  - name: title
+    label: Title
+
+rules:
+  - name: update-title
+    path: ./update-page-title.beek
+
+files:
+  - path: ./page.tsx
+    rules:
+      - update-page-title
+```
+
+> Note: The extension for this configuration file needs to be .action.yml
+
+## keywords
+
+### Root
+
+| Keyword               | Description                                                    | Required |
+| :-------------------- | :------------------------------------------------------------- | :------- |
+| name\*                | The name of your action.                                       | ✔        |
+| label                 | A nice label for your action.                                  | ✘        |
+| description           | A short text describing what your action will do.              | ✘        |
+| group                 | The parent group of the action, for grouping actions together. | ✘        |
+| variables             | The variables that will be injected to rules.                  | ✘        |
+| [rules](actions#rule) | The list of rules to apply with this action.                   | ✔        |
+| [files](actions#file) | The list of files that will be affected by this action.        | ✔        |
+
+### Rule
+
+| Keyword | Description                                  | Required |
+| :------ | :------------------------------------------- | :------- |
+| name\*  | The reference name of your rule.             | ✔        |
+| path\*  | The relative path of the rule configuration. | ✔        |
+
+### File
+
+| Keyword | Description                                  | Required |
+| :------ | :------------------------------------------- | :------- |
+| path\*  | The relative path of the target file.        | ✔        |
+| rules\* | The list of the names of the rules to apply. | ✔        |

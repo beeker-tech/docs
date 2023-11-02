@@ -5,3 +5,20 @@ Beeker is an **Artificial** **Intelligence** **Orchestrator** for generating cod
 It works with any language and any framework, and is based on openAI.
 
 Website : https://www.beeker.tech
+
+## Core Objects
+
+### Action
+
+An action is a modification made by AI to your source code. It serves as the "orchestrator" and allows you to specify which files need to be updated.
+
+For API and examples, see [Action](/API/action)
+
+### Rule
+
+A rule is a template prompt used to instruct AI to make changes to a portion of your code.
+You can inject variables into rules, which will be used when applying them.
+
+Rules can be referenced by actions like described on the action example above.
+
+For API and examples, see [Rule](/API/rule)
