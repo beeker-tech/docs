@@ -81,6 +81,9 @@ const config: DocsThemeConfig = {
       </svg>
     </span>
   ),
+  project: {
+    link: "https://github.com/sebvanson/beeker",
+  },
   footer: {
     text: (
       <p>
