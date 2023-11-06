@@ -84,6 +84,7 @@ const config: DocsThemeConfig = {
   project: {
     link: "https://github.com/sebvanson/beeker",
   },
+  docsRepositoryBase: "https://github.com/sebvanson/beeker",
   footer: {
     text: (
       <p>
