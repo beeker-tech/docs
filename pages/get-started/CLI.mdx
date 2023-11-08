@@ -63,6 +63,17 @@ with **pnpm**
 pnpm add -D @beeker-tech/cli
 ```
 
+You can add the following script in your package.json:
+
+```json filename="package.json" copy
+  "scripts": {
+    // your other scripts
+    "beeker": "beeker"
+  },
+```
+
+This will allow you to run beeker CLI in your project with command `npm run beeker` or `yarn beeker` or `pnpm run beeker`.
+
 ## Usage
 
 Here is an example of usage in a react application.
