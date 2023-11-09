@@ -1,15 +1,36 @@
-# Beeker Docs Template
+<!-- markdownlint-disable MD033 MD041 -->
+<p align="center" style="margin-top: 20px;">
+  <a href="https://www.beeker.tech">
+    <img src="https://ik.imagekit.io/beeker/logo.svg?updatedAt=1696089271712" alt="Beeker logo" width="75" />
+  </a>
+</p>
 
-This is the public repository for Beeker Docs. If you find any errors in our docs or have suggestions, please submit an issue or pull request.
+## Overview
 
-## License
+This repository contains the source code of Beeker's documentation.
 
-Documentation (guides, references, and associated images) is licensed as
-Creative Commons Attribution-NonCommercial-ShareAlike CC BY-NC-SA. The full
-license can be found
-[here](http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode), and the
-human-readable summary
-[here](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+## About Beeker
 
-Everything in this repository not covered above is licensed under the [included
-MIT license](./LICENSE).
+Beeker is an **Artificial** **Intelligence** **Orchestration Technology** for generating code in your codebase.
+
+It works with any language and any framework, and is based on openAI.
+
+More information at [beeker.tech](https://www.beeker.tech)
+
+## Getting Started
+
+Run the following command to install dependencies :
+
+```console copy
+npm install
+```
+
+Run the following commands to start the development server:
+
+```console copy
+npm run dev
+```
+
+## Licensing
+
+beeker-tech/docs is licensed under the Apache License, Version 2.0. See [LICENSE](./LICENSE) for the full license text.
