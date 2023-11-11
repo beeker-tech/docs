@@ -3,8 +3,44 @@ import { DocsThemeConfig } from "nextra-theme-docs";
 import styles from "./theme.config.module.scss";
 
 const currentYear = new Date().getFullYear();
+const BANNER_OPTION = {
+  banner: {
+    key: "New release is out!",
+    text: "New release is out!",
+  },
+};
+const SHOULD_SHOW_BANNER = false;
+const bannerOption = SHOULD_SHOW_BANNER ? BANNER_OPTION : undefined;
 
 const config: DocsThemeConfig = {
+  ...bannerOption,
+  project: {
+    link: "https://github.com/beeker-tech",
+  },
+  chat: {
+    link: "https://discord.gg/PrEMvfBh",
+  },
+  docsRepositoryBase: "https://github.com/beeker-tech/docs",
+  editLink: {
+    text: "Edit this page on GitHub",
+  },
+  footer: {
+    text: (
+      <p>
+        Pamplem -&nbsp;
+        <span style={{ fontSize: "0.75rem" }}>
+          Copyright © 2023-{currentYear}
+        </span>
+      </p>
+    ),
+  },
+  primaryHue: 202,
+  primarySaturation: 96,
+  useNextSeoProps() {
+    return {
+      titleTemplate: "%s – Beeker",
+    };
+  },
   logo: (
     <span>
       <svg
@@ -81,30 +117,6 @@ const config: DocsThemeConfig = {
       </svg>
     </span>
   ),
-  project: {
-    link: "https://github.com/beeker-tech",
-  },
-  docsRepositoryBase: "https://github.com/beeker-tech",
-  footer: {
-    text: (
-      <p>
-        Pamplem -&nbsp;
-        <span style={{ fontSize: "0.75rem" }}>
-          Copyright © 2023-{currentYear}
-        </span>
-      </p>
-    ),
-  },
-  primaryHue: 202,
-  primarySaturation: 96,
-  useNextSeoProps() {
-    return {
-      titleTemplate: "%s – Beeker",
-    };
-  },
-  chat: {
-    link: "https://discord.gg/PrEMvfBh",
-  },
   // To add links to your github and discord, see the following example:
   // https://github.com/shuding/nextra-docs-template/blob/main/theme.config.tsx
 };

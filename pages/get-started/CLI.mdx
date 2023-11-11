@@ -184,16 +184,40 @@ files:
 
 When your action is configured, you can preview it with beeker cli:
 
+<Tabs items={["Global installation", "Local installation"]} defaultIndex="0">
+  <Tabs.Tab>
+
 ```console copy
-beeker
+beeker action preview
 ```
 
-<Steps>
-👉 Select "action"
+👉 Select your action file in list
 
-👉 Then "preview"
+Or directly with path option :
+
+```console copy
+beeker action preview -p ./app/update-page-title.action.yml
+```
+
+  </Tabs.Tab>
+    <Tabs.Tab>
+
+```console copy
+npm run beeker action preview
+```
 
 👉 Select your action file in list
+
+Or directly with path option :
+
+```console copy
+npm run beeker action preview -p ./app/update-page-title.action.yml
+```
+
+  </Tabs.Tab>
+</Tabs>
+
+<Steps>
 
 </Steps>
 
@@ -203,16 +227,40 @@ beeker
 
 When your action is configured, you can launch it with beeker cli:
 
+<Tabs items={["Global installation", "Local installation"]} defaultIndex="0">
+  <Tabs.Tab>
+
 ```console copy
-beeker
+beeker action run
 ```
 
-<Steps>
-👉 Select "action"
+👉 Select your action file in list
 
-👉 Then "execute"
+Or directly with path option :
+
+```console copy
+beeker action run -p ./app/update-page-title.action.yml
+```
+
+  </Tabs.Tab>
+    <Tabs.Tab>
+
+```console copy
+npm run beeker action run
+```
 
 👉 Select your action file in list
+
+Or directly with path option :
+
+```console copy
+npm run beeker action run -p ./app/update-page-title.action.yml
+```
+
+  </Tabs.Tab>
+</Tabs>
+
+<Steps>
 
 </Steps>
 
