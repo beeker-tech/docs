@@ -20,7 +20,7 @@ const config: DocsThemeConfig = {
   chat: {
     link: "https://discord.gg/PrEMvfBh",
   },
-  docsRepositoryBase: "https://github.com/beeker-tech/docs",
+  docsRepositoryBase: "https://github.com/beeker-tech/docs/blob/main",
   editLink: {
     text: "Edit this page on GitHub",
   },
