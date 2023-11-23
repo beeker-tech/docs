@@ -34,25 +34,27 @@ files:
 
 ### Root
 
-| Keyword                      | Description                                                                                                          | Required |
-| :--------------------------- | :------------------------------------------------------------------------------------------------------------------- | :------- |
-| name\*                       | The name of your action.                                                                                             | ✔        |
-| label                        | A nice label for your action.                                                                                        | ✘        |
-| description                  | A short text describing what your action will do.                                                                    | ✘        |
-| group                        | The parent group of the action, for grouping actions together.                                                       | ✘        |
-| parallelize                  | Set to true if rules should be applied in parallel, of false if it should be applied sequentially. (true by default) | ✘        |
-| [variables](action#variable) | The list of variables that will be injected to rules.                                                                | ✘        |
-| [rules\*](action#rule)       | The list of rules to apply with this action.                                                                         | ✔        |
-| [files\*](action#file)       | The list of files that will be affected by this action.                                                              | ✔        |
+| Keyword                      | Description                                                                                                           | Required |
+| :--------------------------- | :-------------------------------------------------------------------------------------------------------------------- | :------- |
+| name\*                       | The name of your action.                                                                                              | ✔        |
+| label                        | A nice label for your action.                                                                                         | ✘        |
+| description                  | A short text describing what your action will do.                                                                     | ✘        |
+| group                        | The parent group of the action, for grouping actions together.                                                        | ✘        |
+| parallelize                  | Set to true if rules should be applied in parallel, of false if it should be applied sequentially. (defaults to true) | ✘        |
+| [variables](action#variable) | The list of variables that will be injected to rules.                                                                 | ✘        |
+| [rules\*](action#rule)       | The list of rules to apply with this action.                                                                          | ✔        |
+| [files\*](action#file)       | The list of files that will be affected by this action.                                                               | ✔        |
 
 ### Variable
 
-| Keyword       | Description                                                                        | Required |
-| :------------ | :--------------------------------------------------------------------------------- | :------- |
-| name\*        | The technical name of the variable.                                                | ✔        |
-| label         | The label displayed next to inputs in beeker apps.                                 | ✘        |
-| value         | The value of the variable.                                                         | ✘        |
-| default_value | The default value of the variable, displayed in input placeholders of beeker apps. | ✘        |
+| Keyword       | Description                                                                               | Required |
+| :------------ | :---------------------------------------------------------------------------------------- | :------- |
+| name\*        | The technical name of the variable.                                                       | ✔        |
+| label         | The label displayed next to inputs in beeker apps.                                        | ✘        |
+| description   | The description displayed in a tooltip on 'Ⓘ' next to inputs in beeker apps.              | ✘        |
+| value         | The value of the variable.                                                                | ✘        |
+| default_value | The default value of the variable, displayed in the placeholder of inputs in beeker apps. | ✘        |
+| required      | Set this to false to make the variable optional (defaults to true)                        | ✘        |
 
 ### Rule
 
