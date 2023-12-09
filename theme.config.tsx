@@ -15,7 +15,7 @@ const bannerOption = SHOULD_SHOW_BANNER ? BANNER_OPTION : undefined;
 const config: DocsThemeConfig = {
   ...bannerOption,
   project: {
-    link: "https://github.com/beeker-tech/beeker",
+    link: "https://github.com/beeker-tech",
   },
   chat: {
     link: "https://discord.gg/PrEMvfBh",
