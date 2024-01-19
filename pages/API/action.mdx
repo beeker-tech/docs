@@ -20,12 +20,7 @@ variables:
 
 rules:
   - name: update-title
-    path: ./update-page-title.beek
-
-files:
-  - path: ./page.tsx
-    rules:
-      - update-page-title
+    target: ./page.tsx
 ```
 
 > Note: The extension for this configuration file needs to be .action.yml
@@ -43,7 +38,6 @@ files:
 | parallelize                  | Set to true if rules should be applied in parallel, of false if it should be applied sequentially. (defaults to true) | ✘        |
 | [variables](action#variable) | The list of variables that will be injected to rules.                                                                 | ✘        |
 | [rules\*](action#rule)       | The list of rules to apply with this action.                                                                          | ✔        |
-| [files\*](action#file)       | The list of files that will be affected by this action.                                                               | ✔        |
 
 ### Variable
 
@@ -58,15 +52,10 @@ files:
 
 ### Rule
 
-| Keyword | Description                                  | Required       |
-| :------ | :------------------------------------------- | :------------- |
-| name\*  | The reference name of your rule.             | ✔              |
-| path    | The relative path of the rule configuration. | ✔ (if no spec) |
-| spec    | The content of the rule.                     | ✔ (if no path) |
-
-### File
-
-| Keyword | Description                                  | Required |
-| :------ | :------------------------------------------- | :------- |
-| path\*  | The relative path of the target file.        | ✔        |
-| rules\* | The list of the names of the rules to apply. | ✔        |
+| Keyword  | Description                                                            | Required |
+| :------- | :--------------------------------------------------------------------- | :------- |
+| name\*   | The reference name of your rule.                                       | ✔        |
+| target\* | The path to the file modified by your rule.                            | ✔        |
+| path     | The relative path of the rule configuration. Defaults to file name.    | ✘        |
+| spec     | The content of the rule.                                               | ✘        |
+| only     | Set this to true to apply only this rule in action (defaults to false) | ✘        |
