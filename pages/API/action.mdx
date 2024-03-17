@@ -31,9 +31,9 @@ rules:
 
 | Keyword                      | Description                                                                                                           | Required |
 | :--------------------------- | :-------------------------------------------------------------------------------------------------------------------- | :------- |
-| name\*                       | The name of your action.                                                                                              | ✔        |
-| label                        | A nice label for your action.                                                                                         | ✘        |
-| description                  | A short text describing what your action will do.                                                                     | ✘        |
+| name\*                       | The name of the action.                                                                                               | ✔        |
+| label                        | A nice label for the action.                                                                                          | ✘        |
+| description                  | A short text describing what the action will do.                                                                      | ✘        |
 | group                        | The parent group of the action, for grouping actions together.                                                        | ✘        |
 | parallelize                  | Set to true if rules should be applied in parallel, of false if it should be applied sequentially. (defaults to true) | ✘        |
 | [variables](action#variable) | The list of variables that will be injected to rules.                                                                 | ✘        |
@@ -52,11 +52,42 @@ rules:
 
 ### Rule
 
-| Keyword  | Description                                                                     | Required |
-| :------- | :------------------------------------------------------------------------------ | :------- |
-| name\*   | The reference name of your rule.                                                | ✔        |
-| target\* | The relative path to the file modified by your rule.                            | ✔        |
-| context  | The relative path to the file that will serve as the context for the rule.      | ✘        |
-| path     | The relative path to the configuration file of the rule. Defaults to file name. | ✘        |
-| spec     | The content of the rule.                                                        | ✘        |
-| only     | Set this to true to apply only this rule in action (defaults to false)          | ✘        |
+| Keyword                        | Description                                                                                                                | Required |
+| :----------------------------- | :------------------------------------------------------------------------------------------------------------------------- | :------- |
+| name\*                         | The reference name of the rule.                                                                                            | ✔        |
+| target\*                       | The relative path to the file modified by the rule.                                                                        | ✔        |
+| [context](action#context-file) | The relative path to the file (if single), or the list of the files that will serve as context for the rule (if multiple). | ✘        |
+| path                           | The relative path to the configuration file of the rule. Defaults to file name.                                            | ✘        |
+| spec                           | The content of the rule.                                                                                                   | ✘        |
+| only                           | Set this to true to apply only this rule in action (defaults to false)                                                     | ✘        |
+
+### Context File
+
+| Keyword | Description                                               | Required |
+| :------ | :-------------------------------------------------------- | :------- |
+| name\*  | The name of the context reference for use in the rule.    | ✔        |
+| path\*  | The relative path to the file that will serve as context. | ✔        |
+
+#### Shortcuts
+
+If you want to add only one file to the context, you can provide directly the path of the file :
+
+```yml
+rules:
+  - name: example-rule
+    target: ./target.tsx
+    context: ./context.tsx
+```
+
+If you want to add multiple files to the context without specifying context names, you can provide a list of paths :
+
+```yml
+rules:
+  - name: example-rule
+    target: ./target.tsx
+    context:
+      - ./context1.tsx
+      - ./context2.tsx
+```
+
+> 💡 The default context names will be Context1, Context2, etc... if not specified.
