@@ -52,10 +52,11 @@ rules:
 
 ### Rule
 
-| Keyword  | Description                                                            | Required |
-| :------- | :--------------------------------------------------------------------- | :------- |
-| name\*   | The reference name of your rule.                                       | ✔        |
-| target\* | The path to the file modified by your rule.                            | ✔        |
-| path     | The relative path of the rule configuration. Defaults to file name.    | ✘        |
-| spec     | The content of the rule.                                               | ✘        |
-| only     | Set this to true to apply only this rule in action (defaults to false) | ✘        |
+| Keyword  | Description                                                                     | Required |
+| :------- | :------------------------------------------------------------------------------ | :------- |
+| name\*   | The reference name of your rule.                                                | ✔        |
+| target\* | The relative path to the file modified by your rule.                            | ✔        |
+| context  | The relative path to the file that will serve as the context for the rule.      | ✘        |
+| path     | The relative path to the configuration file of the rule. Defaults to file name. | ✘        |
+| spec     | The content of the rule.                                                        | ✘        |
+| only     | Set this to true to apply only this rule in action (defaults to false)          | ✘        |

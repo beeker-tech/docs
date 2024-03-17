@@ -24,11 +24,11 @@ To get started, you can install our command line tool with the package manager o
 
 This is the recommended way if your project is no managed with npm packages (usually projects with other languages than javascript).
 
-<Tabs items={["pnpm", "yarn", "npm"]} defaultIndex="0">
+<Tabs items={["npm", "yarn", "pnpm"]} defaultIndex="0">
   <Tabs.Tab>
 
 ```console copy
-pnpm add -g @beeker-tech/cli
+npm install -g @beeker-tech/cli
 ```
 
   </Tabs.Tab>
@@ -42,33 +42,34 @@ yarn global add @beeker-tech/cli
   <Tabs.Tab>
 
 ```console copy
-npm install -g @beeker-tech/cli
+pnpm add -g @beeker-tech/cli
 ```
 
   </Tabs.Tab>
+
 </Tabs>
 
 ### Local installation
 
 This is the recommended way if you work in a project managed with npm packages (usually javascript projects).
 
-<Tabs items={["pnpm", "yarn", "npm"]} defaultIndex="0">
+<Tabs items={["npm", "yarn", "pnpm"]} defaultIndex="0">
   <Tabs.Tab>
 
 ```console copy
-pnpm add -D @beeker-tech/cli
+npm install -D @beeker-tech/cli
 ```
 
 You can add the following script in your package.json:
 
 ```json filename="package.json" copy
-  "scripts": {
-    // your other scripts
-    "beeker": "beeker"
-  },
+"scripts": {
+  // your other scripts
+  "beeker": "beeker"
+},
 ```
 
-This will allow you to run beeker CLI in your project with command `pnpm run beeker`.
+This will allow you to run beeker CLI in your project with command `npm run beeker`.
 
   </Tabs.Tab>
   <Tabs.Tab>
@@ -80,10 +81,10 @@ yarn add -D @beeker-tech/cli
 You can add the following script in your package.json:
 
 ```json filename="package.json" copy
-  "scripts": {
-    // your other scripts
-    "beeker": "beeker"
-  },
+"scripts": {
+  // your other scripts
+  "beeker": "beeker"
+},
 ```
 
 This will allow you to run beeker CLI in your project with command `yarn beeker`.
@@ -92,19 +93,19 @@ This will allow you to run beeker CLI in your project with command `yarn beeker`
   <Tabs.Tab>
 
 ```console copy
-npm install -D @beeker-tech/cli
+pnpm add -D @beeker-tech/cli
 ```
 
 You can add the following script in your package.json:
 
 ```json filename="package.json" copy
-  "scripts": {
-    // your other scripts
-    "beeker": "beeker"
-  },
+"scripts": {
+  // your other scripts
+  "beeker": "beeker"
+},
 ```
 
-This will allow you to run beeker CLI in your project with command `npm run beeker`.
+This will allow you to run beeker CLI in your project with command `pnpm run beeker`.
 
   </Tabs.Tab>
 </Tabs>
