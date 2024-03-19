@@ -3,113 +3,6 @@ import { Steps } from "nextra/components";
 
 # Beeker CLI
 
-## Introduction
-
-The Command line tool is the only way to run beeker actions at the moment.
-
-## Prerequisite
-
-Beeker is based on Node.js, so you need to get it installed on your machine.
-
-See https://nodejs.org/ for more information.
-
-You'll also need a (free) beeker account to process AI requests.
-It'll be asked on the first execution of the cli.
-
-## Installation
-
-To get started, you can install our command line tool with the package manager of your choice:
-
-### Global installation
-
-This is the recommended way if your project is no managed with npm packages (usually projects with other languages than javascript).
-
-<Tabs items={["npm", "yarn", "pnpm"]} defaultIndex="0">
-  <Tabs.Tab>
-
-```console copy
-npm install -g @beeker-tech/cli
-```
-
-  </Tabs.Tab>
-  <Tabs.Tab>
-
-```console copy
-yarn global add @beeker-tech/cli
-```
-
-  </Tabs.Tab>
-  <Tabs.Tab>
-
-```console copy
-pnpm add -g @beeker-tech/cli
-```
-
-  </Tabs.Tab>
-
-</Tabs>
-
-### Local installation
-
-This is the recommended way if you work in a project managed with npm packages (usually javascript projects).
-
-<Tabs items={["npm", "yarn", "pnpm"]} defaultIndex="0">
-  <Tabs.Tab>
-
-```console copy
-npm install -D @beeker-tech/cli
-```
-
-You can add the following script in your package.json:
-
-```json filename="package.json" copy
-"scripts": {
-  // your other scripts
-  "beeker": "beeker"
-},
-```
-
-This will allow you to run beeker CLI in your project with command `npm run beeker`.
-
-  </Tabs.Tab>
-  <Tabs.Tab>
-
-```console copy
-yarn add -D @beeker-tech/cli
-```
-
-You can add the following script in your package.json:
-
-```json filename="package.json" copy
-"scripts": {
-  // your other scripts
-  "beeker": "beeker"
-},
-```
-
-This will allow you to run beeker CLI in your project with command `yarn beeker`.
-
-  </Tabs.Tab>
-  <Tabs.Tab>
-
-```console copy
-pnpm add -D @beeker-tech/cli
-```
-
-You can add the following script in your package.json:
-
-```json filename="package.json" copy
-"scripts": {
-  // your other scripts
-  "beeker": "beeker"
-},
-```
-
-This will allow you to run beeker CLI in your project with command `pnpm run beeker`.
-
-  </Tabs.Tab>
-</Tabs>
-
 ## Usage
 
 Here is an example of usage in a react application.
@@ -183,27 +76,11 @@ When your action is configured, you can preview it with beeker cli:
   <Tabs.Tab>
 
 ```console copy
-beeker action preview
-```
-
-👉 Select your action file in list
-
-Or directly with path option :
-
-```console copy
 beeker action preview -p ./app/update-page-title.action.yml
 ```
 
   </Tabs.Tab>
     <Tabs.Tab>
-
-```console copy
-npm run beeker action preview
-```
-
-👉 Select your action file in list
-
-Or directly with path option :
 
 ```console copy
 npm run beeker action preview -- -p ./app/update-page-title.action.yml
@@ -226,27 +103,11 @@ When your action is configured, you can launch it with beeker cli:
   <Tabs.Tab>
 
 ```console copy
-beeker action run
-```
-
-👉 Select your action file in list
-
-Or directly with path option :
-
-```console copy
 beeker action run -p ./app/update-page-title.action.yml
 ```
 
   </Tabs.Tab>
     <Tabs.Tab>
-
-```console copy
-npm run beeker action run
-```
-
-👉 Select your action file in list
-
-Or directly with path option :
 
 ```console copy
 npm run beeker action run -- -p ./app/update-page-title.action.yml

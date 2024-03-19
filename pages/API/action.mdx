@@ -36,6 +36,7 @@ rules:
 | description                  | A short text describing what the action will do.                                                                      | ✘        |
 | group                        | The parent group of the action, for grouping actions together.                                                        | ✘        |
 | parallelize                  | Set to true if rules should be applied in parallel, of false if it should be applied sequentially. (defaults to true) | ✘        |
+| target_root_dir              | All paths to target files will be considered relative to this directory.                                              | ✘        |
 | [variables](action#variable) | The list of variables that will be injected to rules.                                                                 | ✘        |
 | [rules\*](action#rule)       | The list of rules to apply with this action.                                                                          | ✔        |
 
@@ -48,7 +49,7 @@ rules:
 | description   | The description displayed in a tooltip on 'Ⓘ' next to inputs in beeker apps.              | ✘        |
 | value         | The value of the variable.                                                                | ✘        |
 | default_value | The default value of the variable, displayed in the placeholder of inputs in beeker apps. | ✘        |
-| required      | Set this to false to make the variable optional (defaults to true)                        | ✘        |
+| required      | Set this to false to make the variable optional (defaults to true).                       | ✘        |
 
 ### Rule
 
@@ -59,7 +60,7 @@ rules:
 | [context](action#context-file) | The relative path to the file (if single), or the list of the files that will serve as context for the rule (if multiple). | ✘        |
 | path                           | The relative path to the configuration file of the rule. Defaults to file name.                                            | ✘        |
 | spec                           | The content of the rule.                                                                                                   | ✘        |
-| only                           | Set this to true to apply only this rule in action (defaults to false)                                                     | ✘        |
+| only                           | Set this to true to apply only this rule in action (defaults to false).                                                    | ✘        |
 
 ### Context File
 

@@ -1,0 +1,55 @@
+import { Tabs } from "nextra/components";
+import { Steps } from "nextra/components";
+
+# Beeker CLI
+
+### Run your action
+
+<Tabs items={["Global installation", "Local installation"]} defaultIndex="0">
+  <Tabs.Tab>
+
+The fastest way to preview an action is to specify its path as follows:
+
+```console copy
+beeker action run -p ./app/update-page-title.action.yml
+```
+
+Alternatively, you can launch the wizard to display the list of available actions:
+
+```console copy
+beeker action run
+```
+
+👉 Select your action file in list
+
+  </Tabs.Tab>
+    <Tabs.Tab>
+
+The fastest way to preview an action is to specify its path as follows:
+
+```console copy
+npm run beeker action run -- -p ./app/update-page-title.action.yml
+```
+
+Alternatively, you can launch the wizard to display the list of available actions:
+
+```console copy
+npm run beeker action run
+```
+
+👉 Select your action file in list
+
+  </Tabs.Tab>
+</Tabs>
+
+<Steps>
+
+</Steps>
+
+> Note: Unlike preview, executing an action will apply modifications on the target file.
+
+| Argument          | Shortcut | Description                                                                      | Required |
+| :---------------- | :------- | :------------------------------------------------------------------------------- | :------- |
+| --path            | -p       |  The path to the action.                                                         | ✘        |
+| --root-dir        | -r       | All paths to actions config files will be considered relative to this directory. | ✘        |
+| --target-root-dir | -t       |  All paths to target files will be considered relative to this directory.        | ✘        |
