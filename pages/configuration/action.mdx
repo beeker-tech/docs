@@ -29,16 +29,17 @@ rules:
 
 ### Root
 
-| Keyword                      | Description                                                                                                           | Required |
-| :--------------------------- | :-------------------------------------------------------------------------------------------------------------------- | :------- |
-| name\*                       | The name of the action.                                                                                               | ✔        |
-| label                        | A nice label for the action.                                                                                          | ✘        |
-| description                  | A short text describing what the action will do.                                                                      | ✘        |
-| group                        | The parent group of the action, for grouping actions together.                                                        | ✘        |
-| parallelize                  | Set to true if rules should be applied in parallel, of false if it should be applied sequentially. (defaults to true) | ✘        |
-| target_root_dir              | All paths to target files will be considered relative to this directory.                                              | ✘        |
-| [variables](action#variable) | The list of variables that will be injected to rules.                                                                 | ✘        |
-| [rules\*](action#rule)       | The list of rules to apply with this action.                                                                          | ✔        |
+| Keyword                      | Description                                                                                                            | Required |
+| :--------------------------- | :--------------------------------------------------------------------------------------------------------------------- | :------- |
+| name\*                       | The name of the action.                                                                                                | ✔        |
+| label                        | A nice label for the action.                                                                                           | ✘        |
+| description                  | A short text describing what the action will do.                                                                       | ✘        |
+| group                        | The parent group of the action, for grouping actions together.                                                         | ✘        |
+| parallelize                  | Set to true if rules should be applied in parallel, of false if it should be applied sequentially. (defaults to true)  | ✘        |
+| target_root_dir              | All paths to target files will be considered relative to this directory.                                               | ✘        |
+| variable_interpolation_mode  | Interpolation mode for variables. Possible values include: double-curly-brace, simple-curly-brace, dollar-curly-brace. | ✘        |
+| [variables](action#variable) | The list of variables that will be injected to rules.                                                                  | ✘        |
+| [rules\*](action#rule)       | The list of rules to apply with this action.                                                                           | ✔        |
 
 ### Variable
 
@@ -92,3 +93,9 @@ rules:
 ```
 
 > 💡 The default context names will be Context1, Context2, etc... if not specified.
+
+### Accommodate your Programming Language
+
+By its very nature, Beeker supports all languages that AI can handle. The default template interpolation mode for variables is double-curly-brace `{{ }}`. However, in certain programming languages, this syntax is already utilized for variable binding.
+
+In such scenarios, you can employ the variable_interpolation_mode property to modify the way variable templates are processed in your action. For instance, in Angular, the double curly brace syntax is used for data binding. To circumvent conflicts with Angular's syntax, you could opt for the dollar-curly-brace syntax: `${ }`.
