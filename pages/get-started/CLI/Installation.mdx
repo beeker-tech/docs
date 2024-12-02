@@ -5,7 +5,7 @@ import { Steps } from "nextra/components";
 
 ## Introduction
 
-The Command line tool is the only way to run beeker actions at the moment.
+This Command line tool allows you to run beeker actions in your local repository.
 
 ## Prerequisite
 
@@ -13,8 +13,27 @@ Beeker is based on Node.js, so you need to get it installed on your machine.
 
 See https://nodejs.org/ for more information.
 
-You'll also need a (free) beeker account to process AI requests.
-It'll be asked on the first execution of the cli.
+You can use this CLI for free if you provide your own OpenAI api key.
+
+1. Purchase an api key on OpenAI website :
+   https://openai.com/api/
+
+2. Create a .beekconfig.yml file at root in your project :
+
+```yml filename=".beekconfig.yml" copy
+openai_organization: your-org
+openai_api_key: your-api-key
+openai_model: gpt-4o
+```
+
+3. Add this file to your .gitignore
+
+```txt filename=".gitignore" copy
+# ... other files ignored
+.beekconfig.yml
+```
+
+Alternatively, you can purchase a paid beeker account and skip this setup (OpenAI services are provided with your paid account).
 
 ## Installation
 
