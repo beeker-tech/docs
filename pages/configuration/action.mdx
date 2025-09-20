@@ -54,21 +54,21 @@ rules:
 
 ### Rule
 
-| Keyword                        | Description                                                                                                                | Required |
-| :----------------------------- | :------------------------------------------------------------------------------------------------------------------------- | :------- |
-| name\*                         | The reference name of the rule.                                                                                            | ✔        |
-| target\*                       | The relative path to the file modified by the rule.                                                                        | ✔        |
-| [context](action#context-file) | The relative path to the file (if single), or the list of the files that will serve as context for the rule (if multiple). | ✘        |
-| path                           | The relative path to the configuration file of the rule. Defaults to file name.                                            | ✘        |
-| spec                           | The content of the rule.                                                                                                   | ✘        |
-| only                           | Set this to true to apply only this rule in action (defaults to false).                                                    | ✘        |
+| Keyword                        | Description                                                                                                                                       | Required |
+| :----------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ | :------- |
+| name\*                         | The reference name of the rule.                                                                                                                   | ✔        |
+| target\*                       | The relative path to the file modified by the rule. Supports global expressions for multiple files.                                               | ✔        |
+| [context](action#context-file) | The relative path to the file (supports global expressions for multiple files), or the list of the files that will serve as context for the rule. | ✘        |
+| path                           | The relative path to the configuration file of the rule. Defaults to file name.                                                                   | ✘        |
+| spec                           | The content of the rule.                                                                                                                          | ✘        |
+| only                           | Set this to true to apply only this rule in action (defaults to false).                                                                           | ✘        |
 
 ### Context File
 
-| Keyword | Description                                               | Required |
-| :------ | :-------------------------------------------------------- | :------- |
-| name\*  | The name of the context reference for use in the rule.    | ✔        |
-| path\*  | The relative path to the file that will serve as context. | ✔        |
+| Keyword | Description                                                                                              | Required |
+| :------ | :------------------------------------------------------------------------------------------------------- | :------- |
+| name\*  | The name of the context reference for use in the rule.                                                   | ✔        |
+| path\*  | The relative path to the file that will serve as context. Supports global expressions for multiple files | ✔        |
 
 #### Shortcuts
 
@@ -90,6 +90,16 @@ rules:
     context:
       - ./context1.tsx
       - ./context2.tsx
+```
+
+You can also use global expressions to target multiple files :
+
+```yml
+rules:
+  - name: example-rule
+    target: ./*.tsx
+    context:
+      - ./context*.tsx
 ```
 
 > 💡 The default context names will be Context1, Context2, etc... if not specified.

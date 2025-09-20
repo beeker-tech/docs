@@ -76,14 +76,14 @@ When your action is configured, you can preview it with beeker cli:
   <Tabs.Tab>
 
 ```console copy
-beeker action preview -p ./app/update-page-title.action.yml
+beeker action preview -p ./app/update-page-title.action.yml -v NewTitle
 ```
 
   </Tabs.Tab>
     <Tabs.Tab>
 
 ```console copy
-npm run beeker action preview -- -p ./app/update-page-title.action.yml
+npm run beeker action preview -- -p ./app/update-page-title.action.yml -v NewTitle
 ```
 
   </Tabs.Tab>
@@ -95,7 +95,7 @@ npm run beeker action preview -- -p ./app/update-page-title.action.yml
 
 > Note: Your target file will not be updated.
 
-### Execute your action
+### Run your action
 
 When your action is configured, you can launch it with beeker cli:
 
@@ -103,14 +103,14 @@ When your action is configured, you can launch it with beeker cli:
   <Tabs.Tab>
 
 ```console copy
-beeker action run -p ./app/update-page-title.action.yml
+beeker action run -p ./app/update-page-title.action.yml -v NewTitle
 ```
 
   </Tabs.Tab>
     <Tabs.Tab>
 
 ```console copy
-npm run beeker action run -- -p ./app/update-page-title.action.yml
+npm run beeker action run -- -p ./app/update-page-title.action.yml -v NewTitle
 ```
 
   </Tabs.Tab>
